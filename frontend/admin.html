@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Club - Адмін</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Адмін-панель</h1>
+
+    <!-- Клієнти -->
+    <h2>Клієнти</h2>
+    <form id="clientForm">
+        <input type="text" id="fullName" placeholder="ПІБ" required>
+        <input type="number" id="age" placeholder="Вік" required>
+        <input type="text" id="phone" placeholder="Телефон" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Додати клієнта</button>
+    </form>
+    <table id="clientsTable" border="1">
+        <thead><tr><th>ПІБ</th><th>Вік</th><th>Телефон</th><th>Email</th><th>Дії</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Запис клієнта на тренування</h2>
+
+    <form id="visitForm">
+        <input type="number" id="visitClientId" placeholder="ID клієнта" required>
+        <input type="number" id="visitTrainerId" placeholder="ID тренера" required>
+        <input type="number" id="visitClassId" placeholder="ID заняття" required>
+        <input type="number" id="visitDateId" placeholder="Date ID" required>
+        <button type="submit">Записати</button>
+    </form>
+
+    <!-- Тренери -->
+    <h2>Тренери</h2>
+    <form id="trainerForm">
+        <input type="text" id="trainerName" placeholder="ПІБ" required>
+        <input type="text" id="specialization" placeholder="Спеціалізація" required>
+        <input type="text" id="trainerPhone" placeholder="Телефон" required>
+        <button type="submit">Додати тренера</button>
+    </form>
+    <table id="trainersTable" border="1">
+        <thead><tr><th>ПІБ</th><th>Спеціалізація</th><th>Телефон</th><th>Дії</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Профіль тренера</h2>
+
+    <input type="number" id="trainerProfileId" placeholder="ID тренера">
+    <button onclick="loadTrainerProfile()">Показати</button>
+
+    <h3>Інформація</h3>
+    <div id="trainerInfo"></div>
+
+  <h3>Графік роботи</h3>
+<ul id="schedule"></ul>
+
+    <h3>Записи на тренування</h3>
+    <table border="1">
+    <thead>
+        <tr><th>Дата</th><th>Клієнт</th><th>Заняття</th></tr>
+    </thead>
+    <tbody id="trainerSessions"></tbody>
+    </table>
+
+    <!-- Абонементи -->
+    <h2>Абонементи</h2>
+    <form id="membershipForm">
+        <input type="text" id="membershipName" placeholder="Назва" required>
+        <input type="number" id="duration" placeholder="Тривалість (днів)" required>
+        <input type="number" step="0.01" id="price" placeholder="Ціна" required>
+        <button type="submit">Додати абонемент</button>
+    </form>
+    <table id="membershipsTable" border="1">
+        <thead><tr><th>Назва</th><th>Тривалість</th><th>Ціна</th><th>Дії</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Графіки -->
+    <h2>Графіки</h2>
+    <label>Введіть рік для доходів: <input type="number" id="incomeYear" value="2025"></label>
+    <button onclick="loadIncome()">Показати графік доходів</button>
+    <canvas id="adminIncomeChart" width="600" height="300"></canvas>
+
+    <label>Введіть місяць (1-12) і рік для тренерів: 
+        <input type="number" id="month" value="4"> 
+        <input type="number" id="year" value="2025">
+    </label>
+    <button onclick="loadTrainerLoad()">Показати графік тренерів</button>
+    <canvas id="adminTrainerChart" width="600" height="300"></canvas>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
