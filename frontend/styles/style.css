@@ -16,3 +16,475 @@ canvas {
   margin: 0 auto;
   display: block;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+}
+
+header {
+    background: #1e1e2f;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card p {
+    font-size: 32px;
+    margin: 10px 0 0;
+    color: #1e1e2f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #ececec;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.client-list {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    list-style: none;
+}
+
+.client-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- Центрування форми логіну --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* якщо є header висотою ~60px */
+}
+
+/* --- Карточка логіну --- */
+.login-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Заголовок сторінки логіну */
+.login-card h2 {
+    margin-bottom: 20px;
+    color: #1e1e2f; /* збігається з твоїм основним кольором */
+}
+
+/* Поля вводу */
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: #3498db; /* виділення при фокусі */
+}
+
+/* Кнопка входу */
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-card button:hover {
+    background: #2980b9;
+}
+
+/* Підказка / текст нижче кнопки */
+.login-card .hint {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* --- Header --- */
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: #3498db;
+    color: white;
+}
+
+/* --- Секції --- */
+section {
+    background: white;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Заголовки секцій */
+section h2, section h3 {
+    color: #1e1e2f;
+    margin-bottom: 15px;
+}
+
+/* Списки послуг */
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background: #f4f6f8;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+section ul li:hover {
+    background: #3498db;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* --- Форма додавання клієнта --- */
+.styled-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 0 auto 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* Поля вводу та select */
+.styled-form input,
+.styled-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    background: #f4f6f8;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.styled-form input:focus,
+.styled-form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    background: white;
+}
+
+/* Кнопка */
+.styled-form button {
+    grid-column: 1 / -1;
+    padding: 14px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.styled-form button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.client-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.client-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.client-list.collapsed {
+    max-height: 230px;
+}
+
+/* .client-list.expanded {
+    max-height: 500px; 
+} */
+
+.toggle-btn {
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.admin-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-top: 30px;
+}
+
+.admin-card h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: #1f2937;
+}
+
+.income-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.income-controls label {
+    font-weight: 500;
+    color: #374151;
+}
+
+.income-controls input {
+    width: 100px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.income-controls button {
+    padding: 8px 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.income-controls button:hover {
+    background: #1e40af;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 350px;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.chart-card h2 {
+    margin-bottom: 15px;
+}
+
+.chart-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.chart-controls input {
+    width: 90px;
+    padding: 6px;
+}
+
+.chart-controls button {
+    padding: 8px 16px;
+    background: #4bc0c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chart-controls button:hover {
+    background: #3aa5a5;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 350px;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.booking-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.booking-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.booking-form button {
+    background: #2ecc71;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background: #27ae60;
+}
+
+.status {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.hero {
+    background: #556a8b;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.services .service-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #666;
+}

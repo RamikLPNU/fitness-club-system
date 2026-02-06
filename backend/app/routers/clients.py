@@ -19,6 +19,10 @@ router = APIRouter(
     tags=["Clients"]
 )
 
+@router.get("/search", response_model=List[ClientResponse])
+def search_client(full_name: str, db: Session = Depends(get_db)):
+    clients = db.query(DimClient).filter(DimClient.full_name.ilike(f"%{full_name}%")).all()
+    return clients
 
 @router.get("/", response_model=List[ClientResponse])
 def read_clients(db: Session = Depends(get_db)):
@@ -80,3 +84,5 @@ def update_existing_client(client_id: int, client: ClientUpdate, db: Session = D
 @router.delete("/{client_id}")
 def delete_existing_client(client_id: int, db: Session = Depends(get_db)):
     return delete_client(db, client_id)
+
+

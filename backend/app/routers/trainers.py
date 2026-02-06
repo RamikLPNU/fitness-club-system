@@ -44,3 +44,12 @@ def trainer_profile(trainer_id: int, db: Session = Depends(get_db)):
         "phone": trainer.phone,
         "schedule": DEFAULT_TRAINER_SCHEDULE
     }
+    
+@router.get("/available")
+def available_trainers(direction: str, db: Session = Depends(get_db)):
+    trainers = (
+        db.query(DimTrainer)
+        .filter(DimTrainer.specialization == direction)
+        .all()
+    )
+    return trainers
