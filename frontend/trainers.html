@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Наші тренери</title>
+    <link rel="stylesheet" href="/static/styles/trainers.css">
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Fitness Club</h1>
+  <nav>
+        <a href="/">Головна</a>
+        <a href="/trainers">Тренери</a>
+        <a href="/booking">Запис на тренування</a>
+        <a href="/login">Адмін</a>
+  </nav>
+</header>
+
+
+<main class="container">
+    <h2 class="page-title">Наші тренери</h2>
+
+    <ul id="trainerList" class="trainer-list"></ul>
+
+    li.innerHTML = `
+        <img src="${randomTrainerPhoto()}" alt="Тренер">
+        <div class="trainer-info">
+            <h3>${t.full_name}</h3>
+            <p><strong>Вік:</strong> ${t.age ?? "—"} років</p>
+            <p><strong>Спеціалізація:</strong> ${t.specialization ?? "—"}</p>
+            <p><strong>Телефон:</strong> ${t.phone ?? "—"}</p>
+        </div>
+    `;
+</main>
+            <script src="/static/js/config.js"></script>
+<script src="/static/js/trainers.js"></script>
+
+</body>
+</html>

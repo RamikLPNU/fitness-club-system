@@ -1,0 +1,88 @@
+<script>
+  if (localStorage.getItem("isAdmin") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Fitness Club</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Fitness Club — Admin</h1>
+    <nav>
+        <a href="/admin_dashboard">Dashboard</a>
+        <a href="/admin_reports">Reports</a>
+        <a href="/">Logout</a>
+    </nav>
+</header>
+
+<main>
+            <section class="cards">
+              <div class="card">
+                  <h3>Клієнти</h3>
+                  <p id="clientsCount">0</p>
+              </div>
+              <div class="card">
+                  <h3>Тренери</h3>
+                  <p id="trainersCount">0</p>
+              </div>
+              <div class="card">
+                  <h3>Активні абонементи</h3>
+                  <p id="membershipsCount">0</p>
+              </div>
+            </section>
+
+    <section>
+    <h2>Клієнти</h2>
+
+    
+
+  <!-- Форма додавання клієнта -->
+  <form id="clientForm" class="form-inline styled-form">
+    <input type="text" id="fullName" placeholder="ПІБ" required>
+    <input type="number" id="age" placeholder="Вік" required>
+    <input type="text" id="phone" placeholder="Телефон" required>
+    <input type="email" id="email" placeholder="Email" required>
+
+    <!-- <select id="membership">
+        <option value="Місячний">Місячний</option>
+        <option value="Річний">Річний</option>
+        <option value="Разовий">Разовий</option>
+    </select> -->
+
+    <button type="submit">Додати</button>
+  </form>
+
+    <!-- Таблиця клієнтів -->
+    <table id="clientsTable" border="1">
+        <thead>
+            <tr>
+                <th>ПІБ</th>
+                <th>Вік</th>
+                <th>Телефон</th>
+                <th>Email</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+</main>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+
+<script>
+function logout() {
+    localStorage.removeItem("isAdmin");
+    window.location.href = "C:/main/fitness-club-system/frontend/index.html";
+}
+</script>
+    

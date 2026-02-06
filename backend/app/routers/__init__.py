@@ -6,3 +6,4 @@ from .dates import router as dates
 from .visits import router as visits
 from .notifications import router as notifications
 from .reports import router as reports
+from .stats import router as stats

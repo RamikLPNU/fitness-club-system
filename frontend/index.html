@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Fitness Club - Користувач</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>Fitness Club</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script src="/static/js/trainers.js"></script>
 </head>
 <body>
-  <h1>Фітнес-клуб - Користувач</h1>
 
-  <h2>Список клієнтів та активність відвідувань</h2>
-  <table id="clientsTable" border="1">
-    <thead>
-      <tr><th>ПІБ</th><th>Вік</th><th>Телефон</th><th>Email</th><th>Кількість відвідувань</th></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<header class="header">
+    <h1>Fitness Club</h1>
+    <nav>
+        <a href="/">Головна</a>
+        <a href="/trainers">Тренери</a>
+        <a href="/booking">Запис на тренування</a>
+        <a href="/login">Адмін</a>
+    </nav>
+</header>
 
+<!-- HERO -->
+<section class="hero">
+    <h2>Твій шлях до здоровʼя та сили</h2>
+    <p>Професійні тренери • Сучасні зали • Зручний запис онлайн</p>
+    <a href="/booking" class="btn-primary">Записатися на тренування</a>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- ПРО КЛУБ -->
+<section class="about">
+    <h3>Про наш фітнес-клуб</h3>
+    <p>
+        Fitness Club — це сучасний простір для тренувань, де кожен клієнт
+        отримує індивідуальний підхід. Ми поєднуємо якісне обладнання,
+        досвідчених тренерів та зручну онлайн-систему запису.
+    </p>
+</section>
+
+<!-- ПОСЛУГИ -->
+<section class="services">
+    <h3>Наші послуги</h3>
+    <div class="service-cards">
+        <div class="card">
+            <h4>Індивідуальні тренування</h4>
+            <p>Персональні заняття з тренером під твої цілі</p>
+        </div>
+        <div class="card">
+            <h4>Групові заняття</h4>
+            <p>Фітнес, йога, функціональні тренування</p>
+        </div>
+        <div class="card">
+            <h4>Кардіо та силові зали</h4>
+            <p>Повністю обладнані зали для будь-якого рівня</p>
+        </div>
+    </div>
+</section>
+
+<!-- ЧОМУ МИ -->
+<section class="benefits">
+    <h3>Чому обирають нас</h3>
+    <ul>
+        <li>✔ Онлайн-запис на тренування</li>
+        <li>✔ Професійні сертифіковані тренери</li>
+        <li>✔ Гнучкі абонементи</li>
+        <li>✔ Система обліку відвідувань</li>
+    </ul>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h3>Готовий почати?</h3>
+    <p>Запишись на тренування прямо зараз</p>
+    <a href="/booking" class="btn-secondary">Перейти до запису</a>
+</section>
+
+<footer class="footer">
+    <p>© 2025 Fitness Club. Всі права захищені.</p>
+</footer>
+
 </body>
 </html>

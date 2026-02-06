@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Наші тренери</title>
+    <link rel="stylesheet" href="/static/styles/trainers.css">
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+<header>
+  <h1>Fitness Club</h1>
+  <nav>
+        <a href="/">Головна</a>
+        <a href="/trainers">Тренери</a>
+        <a href="/booking">Запис на тренування</a>
+        <a href="/login">Адмін</a>
+  </nav>
+
+</header>
+
+
+<main class="container">
+        <form id="bookingForm" class="booking-form">
+    <input id="clientName" placeholder="Ваше імʼя" required>
+
+    <input type="date" id="trainingDate" required>
+
+    <select id="direction" required>
+        <option value="">Оберіть напрям</option>
+        <option value="Fitness">Fitness</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Crossfit">Crossfit</option>
+    </select>
+
+    <select id="trainer" required>
+        <option value="">Оберіть тренера</option>
+    </select>
+
+    <button type="submit">Записатися</button>
+</form>
+
+<p id="bookingStatus"></p>
+
+<h3>Мої записи</h3>
+<ul id="bookingList"></ul>
+</main>
+
+<script src="/static/js/booking.js"></script>
+
+</body>
+</html>
